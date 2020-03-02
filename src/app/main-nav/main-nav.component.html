@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <mat-sidenav-container class="sidenav-container">
+    <mat-sidenav
+       #drawer class="sidenav"
+       fixedInViewport="false"
+        [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+        [mode]="(isHandset$ | async) ? 'over' : 'side'"
+        [opened]="(isHandset$ | async) === false">
+      <mat-toolbar ><p class="navlogo"><span class="EBOX">EBOX</span>Door</p></mat-toolbar>
+
+      <mat-nav-list class="menuside" >
+        <a class="menulist" mat-list-item href="#">Home</a>
+        <a class="menulist" mat-list-item href="#">User Dashboard</a>
+        <a class="menulist" mat-list-item href="#">About</a>
+        <a class="menulist" mat-list-item href="#">Contact</a>
+      </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <mat-toolbar color="warn">
+        <button
+          type="button"
+          aria-label="Toggle sidenav"
+          mat-icon-button
+          (click)="drawer.toggle()"
+          *ngIf="isHandset$ | async">
+          <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+        </button>
+      </mat-toolbar>
+      <!-- Add Content Here -->
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</body>
+</html>
+
+

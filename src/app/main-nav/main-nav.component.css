@@ -1,0 +1,45 @@
+.sidenav-container {
+  height: 100%;
+  width: 100%;
+}
+
+.sidenav {
+  width: 200px;
+
+}
+
+.sidenav .mat-toolbar {
+  background: #f44336;
+  border: 1px red solid;
+  color: white;
+
+
+}
+
+.mat-toolbar.mat-primary {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.menuside {
+  padding-top: 0px;
+}
+.menulist {
+  border-bottom: 0.5px black solid;
+
+}
+.EBOX {
+  font-weight: bold;
+  font-size: 30px;
+}
+.navlogo {
+  padding-top: 25px;
+  height: 40px;
+  width: 100%;
+  float: left;
+  text-align: center;
+
+}
+
+
